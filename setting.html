@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+    <title>setting</title>
+</head>
+<body style="padding-top: 190px;">
+
+    <!-- Header -->
+    <header>
+        <div class="header-container">
+            <img src="logo.png" alt="Health Logo" class="logo">
+            <h1 style="color: #028090; text-shadow: 2px 2px 3px white;">SETTING WEBSITE</h1>
+        </div>
+    </header>
+
+    <!-- Navigation -->
+    <nav>
+
+    </nav>
+    <!-- Tombol untuk mengubah warna latar belakang -->
+    <button onclick="changeBackgroundColor()">Change Background Color</button>
+    <!-- Tombol untuk mereset warna latar belakang ke default -->
+    <button onclick="resetBackgroundColor()">Reset Background Color</button>
+    <!-- Button to trigger popup manually (optional) -->
+    <button onclick="displayAlert()">Back To Home</button>
+
+
+    
+</body>
+<script>
+    // Function to display an alert for latest tips
+    function displayAlert() {
+    // alert("Stay tuned for the latest health tips!");
+    window.location.href = "index.html"; // Mengarahkan pengguna ke halaman content.html
+}
+</script>
+</html>

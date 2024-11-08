@@ -1,0 +1,546 @@
+/* Reset */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    
+}
+
+
+
+/* body*/
+body {
+    padding-top: 160px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #f3f4f6;
+    color: #333;
+}
+
+
+/* ketika scroll */
+#scrollTopButton {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: #028090;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: opacity 0.3s;
+    z-index: 9999; /* Menambahkan z-index agar berada di lapisan paling atas */
+}
+
+#scrollTopButton:hover {
+    background-color: #00a896;
+}
+
+
+
+
+body h1{
+    padding-top: 15px;
+}
+
+/* Header */
+
+header {
+    width: 100%;
+    padding: 2.5em;
+    background-color: #00a896;
+    color: white;
+    text-align: center;
+    position: fixed; /* Membuat header tetap di atas */
+    top: 0; /* Menempel pada bagian atas layar */
+    left: 0;
+    z-index: 1000; /* Pastikan header di atas elemen lain */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Tambahkan bayangan agar terlihat melayang */
+}
+
+/* Beri jarak pada konten agar tidak tertutup header */
+body {
+    padding-top: 80px; /* Sesuaikan dengan tinggi header */
+}
+
+.header-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.logodiam {
+    margin-right: 10px;
+    width: 80px;
+}
+
+/* Animasi berputar 3D pada logo */
+.logo {
+    margin-right: 10px;
+    width: 80px;
+    transition: transform 0.6s ease-in-out;
+    animation: spin3D 3s infinite linear;
+}
+
+@keyframes spin3D {
+    0% {
+        transform: rotateY(0deg);
+    }
+    100% {
+        transform: rotateY(360deg);
+    }
+}
+
+
+
+/* header {
+    width: 100%;
+    padding: 2.5em;
+    background-color: #00a896;
+    color: white;
+    text-align: center;
+
+    
+}
+
+.header-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.logo {
+    width: 80px;
+    margin-right: 10px;
+} */
+
+/* Navigation */
+nav {
+    width: 100%;
+    background-color: #028090;
+    padding: 12px;
+    position: fixed; /* Membuat navigasi tetap di atas */
+    top: 130PX; /* Menempel pada bagian atas layar */
+    left: 0;
+    z-index: 999; /* Pastikan navigasi berada di atas elemen lain */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Tambahkan bayangan agar terlihat melayang */
+}
+
+nav ul {
+    display: flex;
+    justify-content: center;
+    list-style-type: none;
+    padding: 0.5em;
+}
+
+nav ul li {
+    margin: 0 1.5em;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+nav ul li a:hover {
+    color: #00a896;
+}
+
+/* Section */
+section {
+    
+    max-width: 800px;
+    padding: 2em;
+    margin: 2em;
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    
+}
+
+#home {
+    box-shadow: 0px 4px 8px #4CAF50;
+    
+}
+
+.home-container {
+    text-align: center;
+
+    
+}
+
+/* Content Items */
+.content-container {
+    display: flex;
+    justify-content: space-around;
+    gap: 1.5em;
+}
+
+#content{
+    box-shadow: 0px 4px 8px #4CAF50;
+}
+
+.content-item {
+    flex: 1;
+    text-align: center;
+}
+
+.content-item img {
+    width: 100%;
+    max-width: 250px;
+    border-radius: 8px;
+    margin-bottom: 1em;
+}
+
+/* Form */
+form {
+    margin-top: 1em;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+form input, form button {
+    padding: 0.8em;
+    margin: 0.5em 0;
+    width: 100%;
+    max-width: 300px;
+    border-radius: 5px;
+    border: 1px solid #ddd;
+}
+
+form button {
+    background-color: #028090;
+    color: white;
+    cursor: pointer;
+    border: none;
+    transition: background-color 0.3s ease;
+}
+
+form button:hover {
+    background-color: #00a896;
+}
+
+
+
+/* artikel */
+#article {
+    margin: 20px;
+    padding: 20px;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    box-shadow: 0px 4px 8px #4CAF50;
+}
+
+#article h2 {
+    font-size: 1.8em;
+    color: #333;
+    margin-bottom: 15px;
+    border-bottom: 2px solid #4CAF50;
+    padding-bottom: 5px;
+    text-align: left;
+}
+
+#article h3 {
+    color: #333;
+    margin-bottom: 15px;
+    padding-bottom: 5px;
+    text-align: left;
+}
+
+#article p {
+    font-size: 1em;
+    line-height: 1.6;
+    color: #555;
+    margin-bottom: 20px;
+    text-align: justify;
+    margin-left: 20px;
+    margin-right: 20px;
+}
+
+#article ol {
+    padding-left: 20px;
+    margin-bottom: 20px;
+    color: #333;
+    text-align: justify;
+}
+
+#article ol li {
+    font-size: 1em;
+    line-height: 1.6;
+    margin-bottom: 10px;
+    text-align: justify;
+    margin-left: 30px;
+    margin-right: 30px;
+}
+
+#article ul {
+    padding-left: 20px;
+    color: #333;
+    text-align: justify;
+}
+
+#article ul li {
+    font-size: 1em;
+    line-height: 1.6;
+    margin-bottom: 10px;
+    text-align: justify;
+    margin-left: 30px;
+    margin-right: 30px;
+}
+
+#article strong {
+    color: #316833;
+}
+
+
+
+/* Table */
+#Table {
+    width: 100%;
+    padding: 20px;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    box-shadow: 1px 4px 8px #4CAF50;
+}
+
+
+#Table table {
+    width: 100%; /* Mengatur tabel agar lebar penuh */
+    border-collapse: collapse;
+}
+
+#Table caption {
+    font-size: 1.2em;
+    font-weight: bold;
+    margin-bottom: 10px;
+    color: #4CAF50;
+}
+
+#Table th, #Table td {
+    padding: 12px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+}
+
+#Table th {
+    background-color: #4CAF50;
+    color: white;
+}
+
+#Table tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+
+/* Footer */
+footer {
+    width: 100%;
+    text-align: center;
+    padding: 1.5em;
+    background-color: #05668d;
+    color: white;
+    position: relative;
+    bottom: 0;
+    justify-content: center;
+}
+
+
+/* button */
+button {
+    background-color: #4CAF50; /* Warna hijau */
+    color: white;
+    padding: 12px 24px;
+    font-size: 1em;
+    font-weight: bold;
+    border: none;
+    border-radius: 12px;
+    cursor: pointer;
+    transition: transform 0.2s, box-shadow 0.2s;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+    margin-top: 20px;
+}
+
+button:hover {
+    background-color: #45a049; /* Warna hijau sedikit lebih gelap saat hover */
+    transform: scale(1.05);
+    box-shadow: 0 6px 8px rgba(0, 0, 0, 0.3);
+}
+
+button:active {
+    transform: scale(0.98);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+
+
+
+/* Gallery Section */
+#gallery {
+    padding: 3em 0;
+    text-align: center;
+    background-color: #ffffff;
+    box-shadow: 0px 4px 8px #4CAF50;
+}
+
+#gallery h2 {
+    margin-bottom: 2em;    
+    font-size: 2em;
+    color: #028090;
+    /* margin-bottom: 15px;*/
+    border-bottom: 2px solid #028090;
+    /* padding-bottom: 5px; */
+}
+
+
+
+.gallery-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* 3 kolom */
+    gap: 1.5em;
+}
+
+.gallery-item {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 13PX;
+}
+
+.gallery-image {
+    width: 100%;
+    max-width: 250px;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    
+
+}
+
+.gallery-image:hover{
+    box-shadow: 0px 3px 0px black;
+}
+
+
+figcaption {
+    margin-top: 1em;
+    font-size: 1em;
+    color: #028090;
+    font-weight: bold;
+}
+
+figure{
+    transition: transform 0.3s ease-in-out;
+}
+
+figure:hover{
+    transform: scale(1.2);
+
+}
+
+
+/* Responsive */
+@media screen and (max-width: 768px) {
+    .gallery-container {
+        grid-template-columns: 1fr 1fr; /* 2 kolom pada layar lebih kecil */
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .gallery-container {
+        grid-template-columns: 1fr; /* 1 kolom pada layar sangat kecil */
+    }
+}
+
+
+
+
+
+/* About Section */
+#about {
+    padding: 2.5em;
+    margin: 2em 0;
+    /* background-color: #e8f6f5; */
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    max-width: 800px;
+    text-align: center;
+}
+
+#about h2 {
+    color: #00a896;
+    font-size: 1.8em;
+    margin-bottom: 0.5em;
+}
+
+#about p {
+    color: #333;
+    line-height: 1.6;
+    font-size: 1.1em;
+    margin-bottom: 1.5em;
+}
+
+.about-image {
+    width: 150px;
+    border-radius: 50%;
+    margin: 0 auto 1.5em;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease;
+}
+
+.about-image:hover {
+    transform: scale(1.05);
+}
+
+/* Add a call-to-action button in the About section */
+#about button {
+    background-color: #028090;
+    color: white;
+    font-size: 1em;
+    padding: 0.8em 1.5em;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+#about button:hover {
+    background-color: #00a896;
+    transform: scale(1.05);
+}
+
+
+
+
+/* Social Media Section */
+/* #social-media {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    gap: 3em;
+    margin-top: 20px;
+} */
+
+.social-icon {
+    text-decoration: none;
+    color: #ffffff;
+    font-size: 1em;
+    transition: color 0.3s ease, transform 0.3s ease;
+    margin: 1em;
+
+}
+
+.social-icon i {
+    margin-right: 8px; 
+    margin-bottom: 30px;
+
+}
+.social-icon:hover {
+    color: #11ff00;
+    transform: scale(1.2);
+}
